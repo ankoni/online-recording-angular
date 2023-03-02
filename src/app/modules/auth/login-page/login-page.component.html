@@ -1,0 +1,22 @@
+<div class="d-flex flex-direction-column jc-center flex-align-center h-full">
+  <form [formGroup]="form" class="d-flex flex-wrap flex-direction-column flex-align-center full-field">
+    <mat-form-field>
+      <mat-label>Логин</mat-label>
+      <input matInput formControlName="login" placeholder="Логин"/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Пароль</mat-label>
+      <input matInput formControlName="password" type="{{passwordFieldProps.passwordFieldType}}" placeholder="Пароль" />
+      <button matSuffix mat-icon-button matTooltip="{{passwordFieldProps.passwordVisibleIconTooltip}}" (click)="onChangePasswordVisibility()">
+        <mat-icon>
+          {{passwordFieldProps.passwordVisibleIcon}}
+        </mat-icon>
+      </button>
+    </mat-form-field>
+
+  </form>
+  <div>
+    <button mat-button (click)="handleLoginBtn()" [disabled]="form.invalid">Войти</button>
+  </div>
+</div>

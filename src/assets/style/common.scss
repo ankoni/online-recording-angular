@@ -1,0 +1,57 @@
+.w {
+  &-full {
+    width: 100%;
+  }
+  &-50 {
+    width: 50%;
+  }
+}
+
+.h {
+  &-full {
+    height: 100%;
+  }
+}
+
+
+/** display */
+.d {
+    &-block {
+        display: block;
+    }
+    &-flex {
+        display: flex;
+      &.column {
+        flex-direction: column;
+      }
+    }
+}
+
+/** flex */
+.jc {
+  &-between {
+    justify-content: space-between;
+  }
+  &-center {
+    justify-content: center;
+  }
+}
+
+.flex-align {
+  &-center {
+    align-items: center;
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+  &-no {
+    flex-wrap: nowrap;
+  }
+}
+
+.flex-direction {
+  &-column {
+    flex-direction: column;
+  }
+}

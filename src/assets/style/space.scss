@@ -1,0 +1,9 @@
+.p {
+  padding: 8px;
+  &-x {
+    padding: 0 8px;
+  }
+  &-y {
+    padding: 8px 0;
+  }
+}

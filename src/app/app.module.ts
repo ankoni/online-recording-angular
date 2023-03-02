@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import routes from 'src/app/routes';
 
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatCommonModule} from '@angular/material/core';
+import {RouterOutlet} from "@angular/router";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routes,
+    BrowserAnimationsModule,
+    MatCommonModule,
+    RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]

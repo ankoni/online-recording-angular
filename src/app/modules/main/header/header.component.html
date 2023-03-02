@@ -1,0 +1,15 @@
+<div class="d-flex column jc-between h-full">
+  <ng-container *ngIf="user$ | async as user">
+    <div class="d-flex">
+      <h1 class="avatar" matTooltip="{{user.name}}">{{user.name[0]}}</h1>
+    </div>
+    <button mat-icon-button aria-label="Выход" matTooltip="Выход" (click)="onLogoutBtnClick()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </ng-container>
+  <ng-container *ngIf="!(user$ | async)">
+    <button mat-icon-button aria-label="Войти" matTooltip="Войти" (click)="onLoginBtnClick()">
+      <mat-icon>login</mat-icon>
+    </button>
+  </ng-container>
+</div>
