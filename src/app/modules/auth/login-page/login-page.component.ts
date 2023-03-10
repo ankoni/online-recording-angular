@@ -12,7 +12,7 @@ export class LoginPageComponent {
   @Output() onLogin: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   form: FormGroup = new FormGroup({
-    login: new FormControl(null, Validators.required),
+    username: new FormControl(null, Validators.required),
     password: new FormControl(),
   });
 
@@ -40,11 +40,12 @@ export class LoginPageComponent {
 
   handleLoginBtn(): void {
     const formData = this.form.getRawValue();
-    this.authService.login(formData.login).subscribe((result) => {
-      if (result) {
+    this.authService.user$.subscribe(user => {
+      if (user) {
         this.onLogin.next(true);
         this.router.navigate(['/']);
       }
-    });
+    })
+    this.authService.login(formData);
   }
 }

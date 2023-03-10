@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.user$ = this.authService.user$.asObservable();
+    this.authService.getStatus();
   }
 
   onLogoutBtnClick(): void {

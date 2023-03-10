@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss" 
+          "style": "scss"
         }
       },
       "root": "",
@@ -68,7 +68,8 @@
               "browserTarget": "online-recording:build:production"
             },
             "development": {
-              "browserTarget": "online-recording:build:development"
+              "browserTarget": "online-recording:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

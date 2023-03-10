@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatCommonModule} from '@angular/material/core';
 import {RouterOutlet} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {RouterOutlet} from "@angular/router";
     routes,
     BrowserAnimationsModule,
     MatCommonModule,
-    RouterOutlet
+    RouterOutlet,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
